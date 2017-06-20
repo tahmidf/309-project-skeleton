@@ -32,12 +32,12 @@ var initial = [{
 
   },
 
+  
   {
-    title: "article 3",
-    content: "content for article 3 ",
+    title: "article 1",
+    content: "content for article 1 ",
     user:user
-
-  }
+  },
 ]
 
 initial.forEach(function(article) {
