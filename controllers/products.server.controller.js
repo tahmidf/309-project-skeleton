@@ -25,6 +25,43 @@ module.exports.listview=function(req,res)
   });
 }
 
+module.exports.new=function(req,res)
+{
+  
+
+      res.render('./../public/views/Product/create.ejs', {
+		  user: req.user || null,
+		  request: req
+	    });
+}
+// module.exports.new=function(req,res)
+// {
+  
+
+//       res.render('./../public/views/product/edit.ejs', {
+// 		  user: req.user || null,
+// 		  request: req
+// 	    });
+// }
+// module.exports.new=function(req,res)
+// {
+  
+
+//       res.render('./../public/views/product/list.ejs', {
+// 		  user: req.user || null,
+// 		  request: req
+// 	    });
+// }
+// module.exports.new=function(req,res)
+// {
+  
+
+//       res.render('./../public/views/product/view.ejs', {
+// 		  user: req.user || null,
+// 		  request: req
+// 	    });
+// }
+
 module.exports.list = function(req, res) {
   Product.find(function(err, data) {
     if (err) {
