@@ -71,16 +71,30 @@ var product={
             product.description=$("#description").val();
             product.price=$("#price").val();
             product.quantity=$("#quantity").val();
-            console.log(product);
-            // $ajax({
+            //console.log(product);
+            
+            $.ajax({
+                method:"POST",
+                url:'/api/products',
+                data: product
+            }).done(function(response){
+            alert("The Product has been added");
+            console.log("Product has been added");
+      //window.location.replace("/add_product");
+            }).fail(function(response){
+              $("#error").text(JSON.parse(response.responseText).message);
+              console.log(JSON.parse(response.responseText).message);
+            });
+        }
+  });
+</script>
+</body>
+</html>
+<!--// $ajax({
             //     url:"/api/products",
             //     method:"post",
             //     data:product
             // });
-        }else{
-            console.log("invalid input");
-        }
-    });
-</script>
-</body>
-</html>
+        //}else{
+          //  console.log("invalid input");
+        //}-->
