@@ -34,17 +34,17 @@ module.exports.new=function(req,res)
 		  request: req
 	    });
 }
-// module.exports.new=function(req,res)
-// {
+ module.exports.view=function(req,res)
+ {
   
 
-//       res.render('./../public/views/product/edit.ejs', {
-// 		  user: req.user || null,
-// 		  request: req
-// 	    });
-// }
+       res.render('./../public/views/Product/view.ejs', {
+ 		  user: req.user || null,
+ 		  request: req
+ 	    });
+ }
 // module.exports.new=function(req,res)
-// {
+ //{
   
 
 //       res.render('./../public/views/product/list.ejs', {

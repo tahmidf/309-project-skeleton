@@ -80,7 +80,7 @@ var product={
             }).done(function(response){
             alert("The Product has been added");
             console.log("Product has been added");
-      //window.location.replace("/add_product");
+            window.location.replace("/products/"+response._id);
             }).fail(function(response){
               $("#error").text(JSON.parse(response.responseText).message);
               console.log(JSON.parse(response.responseText).message);
